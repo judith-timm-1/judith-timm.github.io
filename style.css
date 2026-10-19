@@ -1,0 +1,139 @@
+/* Grundlayout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FCFAF7;
+    color: #121010;
+    font-family: "Jost", sans-serif;
+}
+
+/* Layout */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* Hero */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-family: "League Gothic", sans-serif;
+    font-size: clamp(5rem, 9vw, 8rem);
+    line-height: 0.9;
+    color: #7D13AB;
+    text-transform: uppercase;
+}
+
+.accent-line {
+    width: 100px;
+    height: 5px;
+    background: #7D13AB;
+    border-radius: 999px;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 1.1rem;
+    max-width: 420px;
+    color: #121010;
+    opacity: 0.8;
+}
+
+/* Bild */
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.08),
+        0 10px 20px rgba(0,0,0,0.04);
+
+    transition: transform .3s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-5px);
+}
+
+/* Textkarte */
+
+.content-card {
+    background: rgba(255,255,255,0.7);
+
+    backdrop-filter: blur(10px);
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.05);
+}
+
+.content-card h2 {
+    font-family: "League Gothic", sans-serif;
+    font-size: 3rem;
+    color: #7D13AB;
+    margin-bottom: 24px;
+}
+
+.content-card p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .content-card {
+        padding: 32px 24px;
+    }
+
+    .content-card h2 {
+        font-size: 2.4rem;
+    }
+}
